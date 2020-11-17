@@ -1,0 +1,8 @@
+1. Clone project from https://github.com/Patryk-97/Mobile_Calendar
+2. Open a project from Visual Studio Code
+3. Open terminal and enter: npm install
+4. Enter: npm start
+5. Go to browser and enter http://localhost:3000/year=[year]&month=[month]
+6. Examples:
+- http://localhost:3000/year=2000&month=12
+- http://localhost:3000/year=2020&month=10

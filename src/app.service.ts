@@ -14,7 +14,6 @@ export class AppService {
     const response = await this.httpService.get(query).toPromise();
     const htmlData = response.data;
     const root = parse(htmlData);
-    console.log(root.firstChild.toString());
-    return root.firstChild.toString();
+    return root;
   }
 }
