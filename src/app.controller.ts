@@ -6,7 +6,8 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get('year=:year&month=:month')
-  getCalendar(@Param('year') year: string, @Param('month') month: string): string {
-    return year + " " + month;
+  async getCalendar(@Param('year') year: number, @Param('month') month: number): Promise<string> {
+    let response = await this.appService.getCalendar(year, month);
+    return response.data;
   }
 }
