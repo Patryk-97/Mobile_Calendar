@@ -1,0 +1,79 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:18702ae4-6011-4d11-89c3-535738a3a050
+SUMMARY:First Step to Fields Medal
+DTSTAMP:20201201T134700Z
+DTSTART;VALUE=DATE:20200309
+DESCRIPTION:First Step to Fields Medal
+URL:javascript:void();
+END:VEVENT
+BEGIN:VEVENT
+UID:b71a7944-b813-45e1-81cc-6f29a3d96995
+SUMMARY:Finał konkursu InfoSukces
+DTSTAMP:20201201T134700Z
+DTSTART;VALUE=DATE:20200313
+DESCRIPTION:Finał konkursu InfoSukces
+URL:javascript:void();
+END:VEVENT
+BEGIN:VEVENT
+UID:dcfd74c6-2256-43f7-81bb-0c25a87c1337
+SUMMARY:Matura pr&oacute\;bna Matematyka podstawowa
+DTSTAMP:20201201T134700Z
+DTSTART;VALUE=DATE:20200316
+DESCRIPTION:Matura pr&oacute\;bna Matematyka podstawowa
+URL:javascript:void();
+END:VEVENT
+BEGIN:VEVENT
+UID:672fd9b5-9bf7-469c-8293-32e78e231725
+SUMMARY:Matura pr&oacute\;bna Matematyka rozszerzona
+DTSTAMP:20201201T134700Z
+DTSTART;VALUE=DATE:20200317
+DESCRIPTION:Matura pr&oacute\;bna Matematyka rozszerzona
+URL:javascript:void();
+END:VEVENT
+BEGIN:VEVENT
+UID:da6d5a80-5505-4f7c-b266-366ea8403bbd
+SUMMARY:Matura pr&oacute\;bna Fizyka rozszerzona
+DTSTAMP:20201201T134700Z
+DTSTART;VALUE=DATE:20200318
+DESCRIPTION:Matura pr&oacute\;bna Fizyka rozszerzona
+URL:javascript:void();
+END:VEVENT
+BEGIN:VEVENT
+UID:e090bef8-b0e4-4b50-a275-dd3628da52bc
+SUMMARY:Matura pr&oacute\;bna Chemia rozszerzona
+DTSTAMP:20201201T134700Z
+DTSTART;VALUE=DATE:20200319
+DESCRIPTION:Matura pr&oacute\;bna Chemia rozszerzona
+URL:javascript:void();
+END:VEVENT
+BEGIN:VEVENT
+UID:c851a296-6b1a-45ce-84d4-d1bca49ea0b3
+SUMMARY:Finał konkursu Fascynująca Fizyka - poziom podstawowy
+DTSTAMP:20201201T134700Z
+DTSTART;VALUE=DATE:20200323
+DESCRIPTION:Finał konkursu Fascynująca Fizyka - poziom podstawowy
+URL:javascript:void();
+END:VEVENT
+BEGIN:VEVENT
+UID:9985049f-d56e-4e08-92da-c543f7b77c6c
+SUMMARY:Finał konkursu Fascynująca Fizyka - poziom ponadpodstawowy
+DTSTAMP:20201201T134700Z
+DTSTART;VALUE=DATE:20200325
+DESCRIPTION:Finał konkursu Fascynująca Fizyka - poziom ponadpodstawowy
+URL:javascript:void();
+END:VEVENT
+BEGIN:VEVENT
+UID:a514c613-179b-4139-984d-3e02fdf11edf
+SUMMARY:Finał konkursu Piękne doświadczenie\, Fascynujące Wyjaśnienie
+DTSTAMP:20201201T134700Z
+DTSTART;VALUE=DATE:20200327
+DESCRIPTION:Finał konkursu Piękne doświadczenie\, Fascynujące Wyjaśnienie
+URL:javascript:void();
+END:VEVENT
+END:VCALENDAR
