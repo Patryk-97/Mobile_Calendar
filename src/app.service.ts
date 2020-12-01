@@ -22,4 +22,34 @@ export class AppService {
     const root = parse(htmlData);
     return root;
   }
+
+  getEvents(htmlData: any): Event[] {
+    const root = parse(htmlData);
+    const activeClasses = root.querySelectorAll('.active');
+    let events: Event[] = [];
+    activeClasses.forEach(activeClass => {
+      if (activeClass.rawTagName === 'td') {
+        const activeHyperlink = activeClass.querySelector('.active');
+        if (activeHyperlink) {
+          const innerBox = activeClass.querySelector('.InnerBox');
+          if (innerBox) {
+            const eventNameWrapper = (() => {
+              const p = innerBox.querySelector('p');
+              if (p) {
+                return p;
+              }
+              return innerBox.querySelector('div');
+            }) ();
+            if (eventNameWrapper) {
+              events.push({
+                day: parseInt(activeHyperlink.rawText),
+                name: eventNameWrapper.rawText,
+                hyperlink: activeHyperlink.getAttribute('href')
+              });
+            }
+          }
+        }
+      }
+    });
+    return events;
 }
