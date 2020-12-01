@@ -3,6 +3,12 @@ import { AxiosResponse } from 'axios';
 import { Observable } from 'rxjs';
 import { parse } from 'node-html-parser';
 
+export type Event = {
+  day: number,
+  name: string,
+  hyperlink: string
+};
+
 @Injectable()
 export class AppService {
   constructor(private httpService: HttpService) {}
