@@ -39,7 +39,6 @@ export class AppService {
 
     if (error) {
       console.log(error);
-      return false;
     }
     return value;
   }
