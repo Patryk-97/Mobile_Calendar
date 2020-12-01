@@ -22,8 +22,6 @@ export class AppService {
     let events: Event[] = this.getEvents(htmlData);
     let icsEvents = [];
     events.forEach(event => {
-      console.log(event);
- 
       const icsEvent = {
         start: [year, month, event.day],
         end: [year, month, event.day],
@@ -51,6 +49,11 @@ export class AppService {
       if (activeClass.rawTagName === 'td') {
         const activeHyperlink = activeClass.querySelector('.active');
         if (activeHyperlink) {
+          let hyperlink = activeHyperlink.getAttribute('href');
+          if (hyperlink === 'javascript:void();')
+          {
+            hyperlink = '';
+          }
           const innerBox = activeClass.querySelector('.InnerBox');
           if (innerBox) {
             const eventNameWrapper = (() => {
@@ -64,7 +67,7 @@ export class AppService {
               events.push({
                 day: parseInt(activeHyperlink.rawText),
                 name: eventNameWrapper.rawText,
-                hyperlink: activeHyperlink.getAttribute('href')
+                hyperlink: hyperlink
               });
             }
           }
