@@ -1,9 +1,9 @@
 import { HttpService, Injectable } from '@nestjs/common';
-import { AxiosResponse } from 'axios';
-import { Observable } from 'rxjs';
 import { parse } from 'node-html-parser';
 
-export type Event = {
+const ics = require('ics');
+
+type Event = {
   day: number,
   name: string,
   hyperlink: string
@@ -13,14 +13,35 @@ export type Event = {
 export class AppService {
   constructor(private httpService: HttpService) {}
 
-  async getCalendar(year: number, month: number): Promise<any> {
+  async getCalendarFileContent(year: number, month: number): Promise<any> {
     let query = 'http://www.weeia.p.lodz.pl/pliki_strony_kontroler/kalendarz.php?';
     query += 'rok=' + year.toString() + '&';
     query += 'miesiac=' + month.toString();
     const response = await this.httpService.get(query).toPromise();
     const htmlData = response.data;
-    const root = parse(htmlData);
-    return root;
+    let events: Event[] = this.getEvents(htmlData);
+    let icsEvents = [];
+    events.forEach(event => {
+      console.log(event);
+ 
+      const icsEvent = {
+        start: [year, month, event.day],
+        end: [year, month, event.day],
+        title: event.name,
+        description: event.name,
+        url: event.hyperlink
+      };
+
+      icsEvents.push(icsEvent);
+    });
+
+    const { error, value } = ics.createEvents(icsEvents);
+
+    if (error) {
+      console.log(error);
+      return false;
+    }
+    return value;
   }
 
   getEvents(htmlData: any): Event[] {
@@ -52,4 +73,5 @@ export class AppService {
       }
     });
     return events;
+  }
 }
